@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App de Dibujo</title>
+    <link rel="stylesheet" href="./static/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-sky-400 static">
+    <h1 class="text-3xl w-full mt-4 font-bold text-center absolute z-50">
+      My Draw App
+    </h1>
+
+    <div
+      class="w-full absolute z-50 bottom-0 bg-sky-300 p-3 rounded-sm flex items-center justify-center gap-2"
+      id="controls"
+    >
+      <input type="color" id="colorPicker" />
+      <button
+        class="p-2 bg-sky-200 rounded-sm hover:bg-sky-400 ease-in-out duration-300"
+        onclick="clearCanvas()"
+      >
+        Borrar
+      </button>
+      <button
+        class="p-2 bg-sky-200 rounded-sm hover:bg-sky-400 ease-in-out duration-300"
+        onclick="saveImage()"
+      >
+        Guardar
+      </button>
+    </div>
+
+    <div class="w-full" id="canvas-container">
+      <canvas class="bg-slate-100" id="canvas"></canvas>
+    </div>
+
+    <a id="downloadJPG" href="#" style="display: none"
+      >Descargar dibujo como JPG</a
+    >
+    <a id="downloadPNG" href="#" style="display: none"
+      >Descargar dibujo como PNG</a
+    >
+    <script src="./static/script.js"></script>
+  </body>
+</html>
